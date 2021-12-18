@@ -18,7 +18,8 @@ html {
         width: 400px;
         border-radius: 5px;
         right: -500px;
-        @apply absolute top-4 shadow-xl;
+        @apply absolute top-4 shadow-xl bg-white;
+        z-index: 99999999 !important;
         .window-content {
             .window-close {
                 @apply absolute top-2 right-2 cursor-pointer;
@@ -43,6 +44,7 @@ html {
         width: 32px;
         writing-mode: vertical-rl;
         transition: right 0.3s;
+        animation: 2s ease-out 1s 1 Slide;
     }
     &.show-window {
         .window {
@@ -51,5 +53,13 @@ html {
         .ext-button {
             right: -50px !important;
         }
+    }
+}
+@keyframes Slide {
+    0% {
+        right: -50px !important;
+    }
+    100% {
+        @apply right-0;
     }
 }

@@ -24,7 +24,8 @@
     "content_scripts": [
         {
             "matches": ["*://*.linkedin.com/*"],
-            "js": ["./static/js/content.js"]
+            "js": ["./static/js/content.js", "./static/js/main.js"],
+            "css": ["./static/css/main.css"]
         }
     ],
     "permissions": ["activeTab"]
